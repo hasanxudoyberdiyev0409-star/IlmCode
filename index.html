@@ -1,118 +1,290 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ilmcode</title>
-  <style>
-    /* Global */
-    * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
-    body {background-color: #ffffff; color:#0a2540; line-height:1.6;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilmcode - Dasturlash va Astronomiya</title>
+    <style>
+      /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    a {text-decoration:none; color:inherit;}
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
 
-    /* Navbar */
-    nav {
-      display:flex; justify-content:space-between; align-items:center;
-      padding:20px 40px; background-color:#f5faff; position:sticky; top:0; z-index:1000;
-      box-shadow:0 2px 5px rgba(0,0,0,0.05);
+/* Navbar */
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav .logo h1 {
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #005f73;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #005f73;
+}
+
+/* Cards Section */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Benefits Section */
+.benefits {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.benefits ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.benefits ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #e3f2fd;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact p {
+    font-size: 18px;
+}
+
+.contact .btn {
+    padding: 12px 25px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (600px to 900px) */
+@media screen and (max-width: 900px) {
+    .cards {
+        justify-content: center;
     }
-    nav .logo {font-size:24px; font-weight:bold; color:#2563eb;}
-    nav ul {display:flex; gap:20px; list-style:none;}
-    nav ul li a:hover {color:#0a54c2;}
-
-    /* Hero */
-    .hero {text-align:center; padding:120px 20px; background:#f0f8ff;}
-    .hero h1 {font-size:50px; color:#2563eb; margin-bottom:20px;}
-    .hero p {font-size:18px; max-width:600px; margin:0 auto 30px; color:#0a2540;}
-    .hero .btn {padding:12px 30px; margin:0 10px; border:none; border-radius:5px; cursor:pointer; font-weight:bold;}
-    .btn-blue {background-color:#2563eb; color:#fff;}
-    .btn-white {background-color:#ffffff; color:#2563eb; border:2px solid #2563eb;}
-    .btn:hover {opacity:0.85; transition:0.3s;}
-
-    /* Cards section */
-    .cards-section {display:flex; justify-content:center; gap:40px; padding:80px 20px; flex-wrap:wrap;}
     .card {
-      background:#ffffff; border:1px solid #e0e0e0; border-radius:10px;
-      width:300px; padding:30px; text-align:center; transition: transform 0.3s, box-shadow 0.3s;
+        width: 45%;
     }
-    .card:hover {transform: translateY(-10px); box-shadow:0 10px 20px rgba(0,0,0,0.1);}
-    .card h3 {color:#2563eb; margin-bottom:15px;}
-    .card p {margin-bottom:20px;}
-    .card button {padding:10px 20px; border:none; border-radius:5px; background:#2563eb; color:#fff; cursor:pointer;}
-    .card button:hover {opacity:0.85; transition:0.3s;}
+    .hero h2 {
+        font-size: 30px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+}
 
-    /* Advantages */
-    .advantages {padding:80px 20px; background:#f0f8ff; text-align:center;}
-    .advantages h2 {font-size:36px; margin-bottom:40px; color:#2563eb;}
-    .advantages ul {list-style:none; max-width:700px; margin:0 auto;}
-    .advantages ul li {margin-bottom:20px; font-size:18px;}
+/* For mobile devices (up to 600px) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
 
-    /* Contact */
-    .contact {padding:80px 20px; text-align:center;}
-    .contact h2 {font-size:36px; margin-bottom:30px; color:#2563eb;}
-    .contact p {margin-bottom:10px; font-size:18px;}
+    .logo h1 {
+        font-size: 24px;
+        text-align: center;
+    }
 
-    /* Footer */
-    footer {padding:20px; text-align:center; background:#f5faff; color:#0a2540; font-size:14px;}
-  </style>
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin: 15px 0;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+    }
+
+    .benefits ul li {
+        font-size: 16px;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+}
+
+    </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">Ilmcode</div>
-    <ul>
-      <li><a href="dasturlash.html">Dasturlash</a></li>
-      <li><a href="#fizika.html">Fizika</a></li>
-      <li><a href="#aloqa.html">Aloqa</a></li>
-    </ul>
-  </nav>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h1>Ilmcode</h1>
+        </div>
+        <ul>
+            <li><a href="dasturlash.html">Dasturlash</a></li>
+            <li><a href="#">Astronomiya</a></li>
+            <li><a href="#">Aloqa</a></li>
+        </ul>
+    </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Ilmcode</h1>
-    <p>Dasturlash va astronomiya chorrahasida bilim va kod birlashadi. Koinot sirlarini o‘rganing va kod bilan kelajakni yarating.</p>
-    <button class="btn btn-blue">Dasturlashni boshlash</button>
-    <button class="btn btn-white">Astronomiyani o‘rganish</button>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Ilmcode - Dasturlash va Astronomiya</h2>
+            <p>Ilmcode platformasida dasturlashni va astronomiyani o‘rganing, ilm-fan dunyosiga yangi qadam qo‘ying.</p>
+            <a href="#start" class="btn">Boshlash</a>
+        </div>
+    </section>
 
-  <!-- Cards Section -->
-  <section class="cards-section" id="dasturlash">
-    <div class="card">
-      <h3>Dasturlash</h3>
-      <p>Web dasturlash, mantiq va real loyihalar orqali bilimni amaliyotga aylantiramiz.</p>
-      <button>Dasturlash bo‘limi</button>
-    </div>
-    <div class="card" id="fizika">
-      <h3>Astronomiya</h3>
-      <p>Koinot, vaqt va fizika qonunlarini sodda va tushunarli tilda o‘rganamiz.</p>
-      <button>Astronomiya bo‘limi</button>
-    </div>
-  </section>
+    <!-- Cards Section -->
+    <section class="cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Dasturlash" alt="Dasturlash" />
+            <h3>Dasturlash</h3>
+            <p>Dasturlashni o‘rganing: HTML, CSS, JavaScript, Python, va boshqa texnologiyalar haqida bilib oling.</p>
+            <a href="#start" class="btn">Boshlash</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Astronomiya" alt="Astronomiya" />
+            <h3>Astronomiya</h3>
+            <p>Yulduzlar, galaktikalar va koinot haqida o‘rganing. Astronomiyaning sirlarini kashf eting.</p>
+            <a href="#start" class="btn">Boshlash</a>
+        </div>
+    </section>
 
-  <!-- Advantages Section -->
-  <section class="advantages">
-    <h2>Bizning afzalliklarimiz</h2>
-    <ul>
-      <li>Ilmga asoslangan yondashuv</li>
-      <li>Sodda va tushunarli izohlar</li>
-      <li>Amaliy va real misollar</li>
-      <li>Yoshlar uchun mos, zamonaviy fikr</li>
-    </ul>
-  </section>
+    <!-- Afzalliklar Section -->
+    <section class="benefits">
+        <h2>Platformaning Afzalliklari</h2>
+        <ul>
+            <li>Oddiy va tushunarli darslar.</li>
+            <li>Amaliyot va kod yozish imkoniyati.</li>
+            <li>Ilmiy yangiliklar va texnologiyalarni kuzatish.</li>
+            <li>Muammolarni hal qilishda yordam va jamoa qo‘llab-quvvatlashi.</li>
+        </ul>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="aloqa">
-    <h2>Bog‘lanish</h2>
-    <p>Telegram: @ilmcode</p>
-    <p>Email: ilmcode@example.com</p>
-  </section>
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Biz bilan Telegram orqali bog'laning</h2>
+        <p><a href="https://t.me/ilmcode" target="_blank" class="btn">Telegram orqali bog'lanish</a></p>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    Ilmcode © 2025 | Ilm • Kod • Koinot
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ilmcode. Barcha huquqlar himoyalangan.</p>
+    </footer>
 
 </body>
 </html>
