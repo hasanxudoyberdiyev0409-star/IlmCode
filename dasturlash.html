@@ -6,6 +6,7 @@
     <title>Ilmcode - Dasturlash Bo'limi</title>
     <style>
       /* Basic Reset */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +27,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav .logo h1 {
@@ -35,6 +37,7 @@ nav .logo h1 {
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
 }
 
 nav ul li {
@@ -86,6 +89,7 @@ nav ul li a {
     display: flex;
     justify-content: space-around;
     padding: 40px 0;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -95,6 +99,7 @@ nav ul li a {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .card h3 {
@@ -145,6 +150,69 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (600px to 900px) */
+@media screen and (max-width: 900px) {
+    .cards {
+        justify-content: center;
+    }
+    .card {
+        width: 45%;
+        margin: 10px;
+    }
+    .hero h2 {
+        font-size: 30px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* For mobile devices (up to 600px) */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin: 15px 0;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+    }
+
+    .tips ul li {
+        font-size: 16px;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
 }
 
     </style>
